@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>EduConnect — Centro Educacional | Transformando Conhecimento em Oportunidades</title>
+  <meta name="description" content="O EduConnect é um centro educacional comprometido com o seu futuro, oferecendo cursos de graduação, técnicos e pós-graduação com excelência acadêmica e inovação.">
+  <meta name="keywords" content="EduConnect, faculdade, cursos, graduação, pós-graduação, ensino superior, educação">
+  <meta name="author" content="Victor, Guilherme, Gustavo - Engenharia de Software">
+  <meta name="theme-color" content="#0F3A6B">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563EB'><path d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.45 9L12 4.34 20.55 9 12 13.66 3.45 9zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/></svg>">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Estilos principais / Design System EduConnect -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Pular para o conteúdo principal (Acessibilidade) -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- =========================================================================
+       1. CABEÇALHO E NAVBAR
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#inicio" class="logo" aria-label="EduConnect Centro Educacional - Início">
+        <span class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.45 9L12 4.34 20.55 9 12 13.66 3.45 9zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </span>
+        <div class="logo-text">
+          <strong>EduConnect</strong>
+          <small>Centro Educacional</small>
+        </div>
+      </a>
+
+      <!-- Botão Hambúrguer Mobile -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Menu de Navegação -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#inicio" class="nav-link active">Início</a></li>
+          <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li class="nav-item"><a href="#cursos" class="nav-link">Cursos</a></li>
+          <li class="nav-item"><a href="#professores" class="nav-link">Professores</a></li>
+          <li class="nav-item"><a href="#eventos" class="nav-link">Eventos</a></li>
+          <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+        <div class="nav-cta">
+          <button type="button" class="btn btn-primary btn-sm btn-pill" id="btn-header-inscreva" data-open-modal="modal-interesse">
+            Inscreva-se
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       CONTEÚDO PRINCIPAL
+       ========================================================================= -->
+  <main id="conteudo-principal">
+
+    <!-- =========================================================================
+         2. SEÇÃO HERO / HOME
+         ========================================================================= -->
+    <section class="hero-section" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge badge-accent">Bem-vindo à EduConnect</span>
+          <h1 id="hero-title" class="hero-title">Transformando conhecimento em oportunidades</h1>
+          <p class="hero-subtitle">
+            Uma instituição de ensino comprometida com o seu futuro. Aqui, você encontra cursos de qualidade, 
+            professores experientes e um ambiente acolhedor para crescer.
+          </p>
+          <div class="hero-actions">
+            <a href="#cursos" class="btn btn-primary btn-lg">Conheça nossos cursos</a>
+            <a href="#contato" class="btn btn-outline-light btn-lg">Fale conosco</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. ESTATÍSTICAS INSTITUCIONAIS
+         ========================================================================= -->
+    <section class="stats-section" aria-label="Estatísticas da instituição">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">+5.000</span>
+              <span class="stat-label">Alunos matriculados</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">+20</span>
+              <span class="stat-label">Cursos disponíveis</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">+10</span>
+              <span class="stat-label">Anos de experiência</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-number">95%</span>
+              <span class="stat-label">Taxa de empregabilidade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. CURSOS EM DESTAQUE (HOME PREVIEW)
+         ========================================================================= -->
+    <section class="section section-destaques" aria-labelledby="destaques-title">
+      <div class="container">
+        <div class="section-header-inline">
+          <div>
+            <h2 id="destaques-title" class="section-title">Nossos cursos em destaque</h2>
+            <p class="section-subtitle">Conheça as formações mais procuradas e conceituadas do mercado.</p>
+          </div>
+          <a href="#cursos" class="link-destaque">
+            Ver todos os cursos
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="courses-grid" id="cursos-destaque-grid">
+          <!-- Renderizado dinamicamente via JS / Cursos em Destaque -->
+        </div>
+
+        <!-- Banner de Chamada para Ação -->
+        <div class="cta-banner">
+          <div class="cta-banner-content">
+            <div class="cta-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+              </svg>
+            </div>
+            <div class="cta-text">
+              <h3>Seu futuro começa aqui!</h3>
+              <p>Faça parte da EduConnect e construa a carreira que você sempre sonhou.</p>
+            </div>
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg" data-open-modal="modal-interesse">
+            Saiba mais
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SOBRE A INSTITUIÇÃO
+         ========================================================================= -->
+    <section class="section section-about" id="sobre" aria-labelledby="sobre-title">
+      <!-- Banner da seção -->
+      <div class="section-banner">
+        <div class="container">
+          <h2 id="sobre-title" class="banner-title">Sobre a EduConnect</h2>
+          <p class="banner-subtitle">Mais que uma instituição, somos um projeto de vida.</p>
+        </div>
+      </div>
+
+      <div class="container section-body">
+        <!-- História -->
+        <div class="about-history-grid">
+          <div class="about-history-text">
+            <span class="badge badge-primary">Quem Somos</span>
+            <h3 class="subsection-title">Nossa história</h3>
+            <p>
+              A <strong>EduConnect</strong> foi fundada em 2015 com o propósito de oferecer uma educação de 
+              qualidade, acessível e que prepare os alunos para os reais desafios do mercado de trabalho e para a vida cidadã.
+            </p>
+            <p>
+              Desde então, temos crescido de forma contínua e impactado milhares de pessoas por meio da tríade 
+              do <strong>ensino, pesquisa e extensão</strong>. Nossos laboratórios de ponta, metodologias ativas 
+              e corpo docente altamente qualificado formam profissionais prontos para liderar transformações.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <strong>+2.500</strong>
+                <span>Formados com sucesso</span>
+              </div>
+              <div class="highlight-item">
+                <strong>Nota Máxima</strong>
+                <span>Avaliação institucional</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-history-media">
+            <img src="img/sobre-campus.jpg" alt="Fachada moderna do campus EduConnect com áreas verdes e arquitetura contemporânea" class="rounded-image shadow-md" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Missão, Visão e Valores -->
+        <div class="mvv-grid">
+          <div class="mvv-card">
+            <div class="mvv-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+              </svg>
+            </div>
+            <h4>Missão</h4>
+            <p>Formar cidadãos críticos, éticos e preparados para transformar o mundo através do conhecimento e da tecnologia.</p>
+          </div>
+
+          <div class="mvv-card">
+            <div class="mvv-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+              </svg>
+            </div>
+            <h4>Visão</h4>
+            <p>Ser referência em educação no país, reconhecida pela excelência no ensino, pesquisa aplicada e estímulo à inovação contínua.</p>
+          </div>
+
+          <div class="mvv-card">
+            <div class="mvv-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+              </svg>
+            </div>
+            <h4>Valores</h4>
+            <ul class="values-list">
+              <li><span class="bullet" aria-hidden="true">✓</span> Ética e Transparência</li>
+              <li><span class="bullet" aria-hidden="true">✓</span> Respeito e Inclusão</li>
+              <li><span class="bullet" aria-hidden="true">✓</span> Excelência Acadêmica</li>
+              <li><span class="bullet" aria-hidden="true">✓</span> Inovação Contínua</li>
+              <li><span class="bullet" aria-hidden="true">✓</span> Responsabilidade Social</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nossa Estrutura -->
+        <div class="about-structure">
+          <div class="structure-intro">
+            <h3 class="subsection-title text-center">Nossa estrutura</h3>
+            <p class="text-center text-muted">Contamos com uma infraestrutura moderna e completa para proporcionar a melhor experiência de aprendizado.</p>
+          </div>
+
+          <div class="structure-grid">
+            <div class="structure-card">
+              <div class="structure-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M4 6h16v10H4zM2 4c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm8 18h4v2h-4z"/>
+                </svg>
+              </div>
+              <h5>Salas de aula modernas</h5>
+              <p>Climatizadas, acústicas e equipadas com recursos audiovisuais interativos de última geração.</p>
+            </div>
+
+            <div class="structure-card">
+              <div class="structure-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l5.59-5.59L19 10l-7 7z"/>
+                </svg>
+              </div>
+              <h5>Laboratórios especializados</h5>
+              <p>Ambientes equipados para computação de alto desempenho, saúde, robótica e prototipagem.</p>
+            </div>
+
+            <div class="structure-card">
+              <div class="structure-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+                </svg>
+              </div>
+              <h5>Biblioteca completa</h5>
+              <p>Acervo físico atualizado, cabines de estudo individuais e acesso a milhares de bases científicas digitais.</p>
+            </div>
+
+            <div class="structure-card">
+              <div class="structure-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+              <h5>Espaços de convivência</h5>
+              <p>Áreas arborizadas de descanso, praça de alimentação e centros de integração estudantil.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. SEÇÃO DE CURSOS
+         ========================================================================= -->
+    <section class="section section-courses" id="cursos" aria-labelledby="cursos-title">
+      <!-- Banner da seção -->
+      <div class="section-banner">
+        <div class="container">
+          <h2 id="cursos-title" class="banner-title">Nossos Cursos</h2>
+          <p class="banner-subtitle">Escolha o curso ideal para o seu futuro.</p>
+        </div>
+      </div>
+
+      <div class="container section-body">
+        <!-- Filtros de cursos -->
+        <div class="filter-controls" role="region" aria-label="Filtro de categorias de cursos">
+          <span class="filter-label">Filtrar por:</span>
+          <div class="filter-pills" id="cursos-filter-buttons" role="tablist">
+            <button type="button" class="filter-btn active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+            <button type="button" class="filter-btn" data-filter="Graduação" role="tab" aria-selected="false">Graduação</button>
+            <button type="button" class="filter-btn" data-filter="Técnico" role="tab" aria-selected="false">Técnico</button>
+            <button type="button" class="filter-btn" data-filter="Pós-graduação" role="tab" aria-selected="false">Pós-graduação</button>
+          </div>
+        </div>
+
+        <!-- Grade de Cursos (Renderizada por JavaScript) -->
+        <div class="courses-grid" id="cursos-grid" aria-live="polite">
+          <!-- Cards de cursos carregados via js/app.js -->
+        </div>
+
+        <div id="cursos-empty" class="empty-state hidden" role="status">
+          <p>Nenhum curso encontrado nesta categoria no momento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. SEÇÃO DE PROFESSORES
+         ========================================================================= -->
+    <section class="section section-professors" id="professores" aria-labelledby="professores-title">
+      <!-- Banner da seção -->
+      <div class="section-banner">
+        <div class="container">
+          <h2 id="professores-title" class="banner-title">Nossos Professores</h2>
+          <p class="banner-subtitle">Conheça os profissionais que fazem parte da nossa equipe.</p>
+        </div>
+      </div>
+
+      <div class="container section-body">
+        <div class="professors-grid" id="professores-grid">
+          <!-- Cards de professores renderizados via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. SEÇÃO DE EVENTOS E NOTÍCIAS
+         ========================================================================= -->
+    <section class="section section-events" id="eventos" aria-labelledby="eventos-title">
+      <!-- Banner da seção -->
+      <div class="section-banner">
+        <div class="container">
+          <h2 id="eventos-title" class="banner-title">Eventos e Notícias</h2>
+          <p class="banner-subtitle">Fique por dentro de tudo o que acontece na EduConnect.</p>
+        </div>
+      </div>
+
+      <div class="container section-body">
+        <!-- Filtros de Eventos -->
+        <div class="filter-controls" role="region" aria-label="Filtro de eventos e notícias">
+          <span class="filter-label">Exibir:</span>
+          <div class="filter-pills" id="eventos-filter-buttons" role="tablist">
+            <button type="button" class="filter-btn active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+            <button type="button" class="filter-btn" data-filter="Evento" role="tab" aria-selected="false">Eventos</button>
+            <button type="button" class="filter-btn" data-filter="Notícia" role="tab" aria-selected="false">Notícias</button>
+          </div>
+        </div>
+
+        <div class="events-list" id="eventos-grid" aria-live="polite">
+          <!-- Renderizado dinamicamente via JS -->
+        </div>
+
+        <div id="eventos-empty" class="empty-state hidden" role="status">
+          <p>Nenhum evento ou notícia encontrado neste filtro.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. SEÇÃO DE CONTATO
+         ========================================================================= -->
+    <section class="section section-contact" id="contato" aria-labelledby="contato-title">
+      <!-- Banner da seção -->
+      <div class="section-banner">
+        <div class="container">
+          <h2 id="contato-title" class="banner-title">Entre em contato</h2>
+          <p class="banner-subtitle">Estamos prontos para tirar suas dúvidas e ajudar você.</p>
+        </div>
+      </div>
+
+      <div class="container section-body">
+        <div class="contact-layout-grid">
+          
+          <!-- Informações de Contato -->
+          <div class="contact-info-col">
+            <h3 class="subsection-title">Fale com a nossa equipe</h3>
+            <p class="text-muted">
+              Tem alguma dúvida sobre os cursos, processo seletivo ou bolsas? Entre em contato por um dos nossos canais ou envie-nos uma mensagem.
+            </p>
+
+            <div class="contact-cards-stack">
+              <div class="contact-item-card">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Endereço</strong>
+                  <p>Av. dos Estudantes, 123 — Centro, São Paulo / SP</p>
+                </div>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Telefone</strong>
+                  <p>(11) 98765-4321 / (11) 3456-7890</p>
+                </div>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>E-mail</strong>
+                  <p>contato@educonnect.com.br</p>
+                </div>
+              </div>
+
+              <div class="contact-item-card">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Horário de atendimento</strong>
+                  <p>Segunda a sexta: 8h às 22h<br>Sábado: 8h às 12h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário de Mensagem -->
+          <div class="contact-form-col">
+            <div class="form-card">
+              <h3 class="form-title">Envie uma mensagem</h3>
+              <p class="form-subtitle">Preencha o formulário e responderemos o mais breve possível.</p>
+
+              <!-- Mensagem de Alerta/Feedback -->
+              <div id="contato-alerta" class="alert-box hidden" role="alert" aria-live="polite"></div>
+
+              <form id="form-contato" novalidate>
+                <div class="form-group">
+                  <label for="contato-nome" class="form-label">Nome completo <span class="required">*</span></label>
+                  <input type="text" id="contato-nome" name="nome" class="form-control" placeholder="Digite seu nome completo" required>
+                  <span class="field-error" id="erro-contato-nome" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contato-email" class="form-label">E-mail <span class="required">*</span></label>
+                  <input type="email" id="contato-email" name="email" class="form-control" placeholder="exemplo@email.com" required>
+                  <span class="field-error" id="erro-contato-email" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contato-curso" class="form-label">Curso de interesse</label>
+                  <select id="contato-curso" name="curso" class="form-control">
+                    <option value="">Selecione um curso (opcional)</option>
+                    <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
+                    <option value="Administração">Administração</option>
+                    <option value="Direito">Direito</option>
+                    <option value="Enfermagem">Enfermagem</option>
+                    <option value="Pedagogia">Pedagogia</option>
+                    <option value="Engenharia Civil">Engenharia Civil</option>
+                    <option value="Técnico em Informática">Técnico em Informática</option>
+                    <option value="Técnico em Enfermagem">Técnico em Enfermagem</option>
+                    <option value="Pós em Engenharia de Software">Pós em Engenharia de Software</option>
+                    <option value="Pós em Gestão Estratégica">Pós em Gestão Estratégica</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contato-mensagem" class="form-label">Mensagem <span class="required">*</span></label>
+                  <textarea id="contato-mensagem" name="mensagem" class="form-control" rows="4" placeholder="Como podemos ajudar você?" required></textarea>
+                  <span class="field-error" id="erro-contato-mensagem" aria-live="polite"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-submit-contato">
+                  Enviar mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       10. RODAPÉ INSTITUCIONAL
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-brand">
+        <a href="#inicio" class="footer-logo" aria-label="EduConnect Centro Educacional">
+          <span class="logo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.45 9L12 4.34 20.55 9 12 13.66 3.45 9zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+            </svg>
+          </span>
+          <div class="logo-text">
+            <strong>EduConnect</strong>
+            <small>Centro Educacional</small>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Instituição de ensino comprometida com a transformação de vidas e a capacitação de líderes para o futuro.
+        </p>
+      </div>
+
+      <div class="footer-col footer-links">
+        <h4 class="footer-heading">Links rápidos</h4>
+        <ul class="footer-nav">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre a Instituição</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#professores">Corpo Docente</a></li>
+          <li><a href="#eventos">Eventos e Notícias</a></li>
+          <li><a href="#contato">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4 class="footer-heading">Contato</h4>
+        <p>Av. dos Estudantes, 123 — Centro</p>
+        <p>São Paulo / SP — CEP 01000-000</p>
+        <p>Telefone: (11) 98765-4321</p>
+        <p>E-mail: contato@educonnect.com.br</p>
+      </div>
+
+      <div class="footer-col footer-social">
+        <h4 class="footer-heading">Redes sociais</h4>
+        <div class="social-links" aria-label="Redes sociais da instituição">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram da EduConnect">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook da EduConnect">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.597 1.323-1.326V1.326C24 .597 23.405 0 22.675 0z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn da EduConnect">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube da EduConnect">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 EduConnect — Centro Educacional. Todos os direitos reservados.</p>
+        <p class="footer-credits">Projeto Acadêmico de Engenharia de Software | Desenvolvido por Victor, Guilherme e Gustavo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. MODAIS ACESSÍVEIS (CURSO, INTERESSE, PROFESSOR, EVENTO)
+       ========================================================================= -->
+
+  <!-- Modal 1: Detalhes do Curso -->
+  <div class="modal-backdrop" id="modal-curso" role="dialog" aria-modal="true" aria-labelledby="modal-curso-titulo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-meta">
+          <span class="badge badge-primary" id="modal-curso-categoria">Graduação</span>
+          <h3 class="modal-title" id="modal-curso-titulo">Detalhes do Curso</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-curso-conteudo">
+        <!-- Preenchido dinamicamente via JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-close-modal>Fechar</button>
+        <button type="button" class="btn btn-primary" id="btn-modal-curso-interesse">Tenho interesse neste curso</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Formulário "Tenho Interesse" -->
+  <div class="modal-backdrop" id="modal-interesse" role="dialog" aria-modal="true" aria-labelledby="modal-interesse-titulo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="modal-interesse-titulo">Demonstrar Interesse</h3>
+          <p class="modal-subtitle">Preencha seus dados para receber a grade curricular e informações sobre matrículas.</p>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="interesse-alerta" class="alert-box hidden" role="alert" aria-live="polite"></div>
+
+        <form id="form-interesse" novalidate>
+          <div class="form-group">
+            <label for="interesse-nome" class="form-label">Nome completo <span class="required">*</span></label>
+            <input type="text" id="interesse-nome" name="nome" class="form-control" placeholder="Seu nome completo" required>
+            <span class="field-error" id="erro-interesse-nome" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group form-col">
+              <label for="interesse-email" class="form-label">E-mail <span class="required">*</span></label>
+              <input type="email" id="interesse-email" name="email" class="form-control" placeholder="seu@email.com" required>
+              <span class="field-error" id="erro-interesse-email" aria-live="polite"></span>
+            </div>
+            <div class="form-group form-col">
+              <label for="interesse-telefone" class="form-label">Telefone / WhatsApp <span class="required">*</span></label>
+              <input type="tel" id="interesse-telefone" name="telefone" class="form-control" placeholder="(11) 99999-9999" required>
+              <span class="field-error" id="erro-interesse-telefone" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="interesse-curso" class="form-label">Curso de interesse <span class="required">*</span></label>
+            <select id="interesse-curso" name="curso" class="form-control" required>
+              <option value="">Selecione o curso</option>
+              <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
+              <option value="Administração">Administração</option>
+              <option value="Direito">Direito</option>
+              <option value="Enfermagem">Enfermagem</option>
+              <option value="Pedagogia">Pedagogia</option>
+              <option value="Engenharia Civil">Engenharia Civil</option>
+              <option value="Técnico em Informática">Técnico em Informática</option>
+              <option value="Técnico em Enfermagem">Técnico em Enfermagem</option>
+              <option value="Pós em Engenharia de Software">Pós em Engenharia de Software</option>
+              <option value="Pós em Gestão Estratégica">Pós em Gestão Estratégica</option>
+            </select>
+            <span class="field-error" id="erro-interesse-curso" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group form-col">
+              <label for="interesse-modalidade" class="form-label">Modalidade <span class="required">*</span></label>
+              <select id="interesse-modalidade" name="modalidade" class="form-control" required>
+                <option value="">Selecione</option>
+                <option value="Presencial">Presencial</option>
+                <option value="EAD">EAD (A distância)</option>
+              </select>
+              <span class="field-error" id="erro-interesse-modalidade" aria-live="polite"></span>
+            </div>
+            <div class="form-group form-col">
+              <label for="interesse-turno" class="form-label">Turno <span class="required">*</span></label>
+              <select id="interesse-turno" name="turno" class="form-control" required>
+                <option value="">Selecione</option>
+                <option value="Manhã">Manhã</option>
+                <option value="Noite">Noite</option>
+              </select>
+              <span class="field-error" id="erro-interesse-turno" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="modal-footer" style="padding-left:0; padding-right:0; padding-bottom:0;">
+            <button type="button" class="btn btn-outline" data-close-modal>Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="btn-submit-interesse">Confirmar interesse</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Detalhes do Professor -->
+  <div class="modal-backdrop" id="modal-professor" role="dialog" aria-modal="true" aria-labelledby="modal-prof-nome" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-primary" id="modal-prof-cargo">Coordenador</span>
+          <h3 class="modal-title" id="modal-prof-nome">Nome do Professor</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-prof-conteudo">
+        <!-- Preenchido dinamicamente via JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-close-modal>Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Detalhes do Evento -->
+  <div class="modal-backdrop" id="modal-evento" role="dialog" aria-modal="true" aria-labelledby="modal-evento-titulo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-accent" id="modal-evento-tipo">Evento</span>
+          <h3 class="modal-title" id="modal-evento-titulo">Título do Evento</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-evento-conteudo">
+        <!-- Preenchido dinamicamente via JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-close-modal>Fechar</button>
+        <button type="button" class="btn btn-primary" id="btn-participar-evento" data-open-modal="modal-interesse">Quero participar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SCRIPTS JAVASCRIPT VANILLA
+       ========================================================================= -->
+  <script src="js/cursos.js"></script>
+  <script src="js/formulario.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
