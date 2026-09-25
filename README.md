@@ -4,6 +4,7 @@
 > Plataforma institucional educacional moderna, responsiva, funcional e acessível, desenvolvida exclusivamente com **HTML5, CSS3 puro (Design System proprietário) e JavaScript Vanilla**.
 
 ---
+URL : https://educonnect-taupe-kappa.vercel.app/
 
 ## 📌 Sumário
 - [Sobre o Projeto](#-sobre-o-projeto)
